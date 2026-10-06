@@ -1,0 +1,36 @@
+/* Tier 1: Primitive Tokens – rohe Werte, ohne Bedeutung */
+:root {
+  --blue-500: #2563eb;
+  --red-500: #ef4444;
+  --white: #ffffff;
+  --gray-100: #f3f4f6;
+  --gray-900: #111827;
+
+  --size-2: 0.5rem;
+  --size-4: 1rem;
+  --size-6: 1.5rem;
+  --size-radius: 8px;
+}
+
+/* Tier 2: Semantische Tokens – Bedeutung, verweisen nur auf Tier 1 */
+:root {
+  --color-primary: var(--red-500);
+  --color-on-primary: var(--white);
+  --color-surface: var(--gray-100);
+  --color-text: var(--gray-900);
+
+  --space-s: var(--size-2);
+  --space-m: var(--size-4);
+  --space-l: var(--size-6);
+  --radius: var(--size-radius);
+
+  --font-sans: system-ui, sans-serif;
+}
+
+/* Tier 3: Komponenten-Tokens – gelten für genau eine Komponente, verweisen auf Tier 2 */
+:root {
+  --button-bg: var(--color-primary);
+  --button-text: var(--color-on-primary);
+  --button-padding: var(--space-s) var(--space-m);
+  --button-radius: var(--radius);
+}
